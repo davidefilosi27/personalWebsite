@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Davide Filosi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  html, body {
+    margin: 0;
+    background-color: #2f3136;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .quadrants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  .quadrant {
+    flex: 1 1 calc(50% - 6px); /* two quadrants per row, same width as other pages */
+    height: 50vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    animation: fadeIn 1s ease both;
+  }
+
+  .quadrant::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.3s ease;
+    z-index: 1;
+  }
+
+  .quadrant a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.04em;
+    transition: transform 0.3s ease;
+  }
+
+  .quadrant:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .quadrant:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+  }
+
+  .quadrant:hover a {
+    transform: translateY(-3px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.03); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Floating Home Button */
+  .home-button {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    z-index: 10;
+  }
+
+  .home-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+  }
+
+  .home-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .home-button:hover svg {
+    opacity: 1;
+  }
+
+  @media (max-width: 991px) {
+    .quadrant {
+      flex: 1 1 100%;
+      height: 100vh;
+    }
+    .quadrants {
+      gap: 0;
+      padding: 0;
+    }
+    .home-button {
+      top: 12px;
+      left: 12px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<a href="/" class="home-button" aria-label="Go to Home">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 3l8 8h-3v8h-10v-8h-3l8-8z"/>
+  </svg>
+</a>
+
+<div class="quadrants">
+  <div class="quadrant" style="background-image: url('images/refLab.JPG');">
+    <a href="https://reflab.onrender.com/">refLab</a>
+  </div>
+  <div class="quadrant" style="background-image: url('images/SinnerTriumphDisaster.jpeg');">
+    <a href="https://github.com/sfiolos/Intelligent_Journal_for_Athletes">Intelligent Journal for Athletes</a>
+  </div>
+</div>
+
+</body>
+</html>

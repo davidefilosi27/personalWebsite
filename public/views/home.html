@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Davide Filosi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  html, body {
+    margin: 0;
+    background-color: #2f3136;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #222;
+  }
+
+  .quadrants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    padding-bottom: 6px; /* ✅ bottom margin now visible */
+    box-sizing: border-box;
+  }
+
+  .quadrant {
+    flex: 1 1 calc(50% - 6px);
+    height: 50vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .quadrant::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.3s ease;
+    z-index: 1;
+  }
+
+  .quadrant a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.04em;
+    transition: transform 0.3s ease;
+  }
+
+  .quadrant:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .quadrant:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+  }
+
+  .quadrant:hover a {
+    transform: translateY(-3px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(1.03); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .quadrant {
+    animation: fadeIn 1s ease both;
+  }
+
+  @media (max-width: 991px) {
+    .quadrant {
+      flex: 1 1 100%;
+      height: 100vh;
+    }
+    .quadrants {
+      gap: 0;
+      padding: 0;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="quadrants">
+  <div class="quadrant" style="background-image: url('images/Scrivania.JPG');">
+    <a href="/projects">Projects</a>
+  </div>
+  <div class="quadrant" style="background-image: url('images/Ora!.jpg');">
+    <a href="/blog">Blog</a>
+  </div>
+  <div class="quadrant" style="background-image: url('images/Nuvole.JPG');">
+    <a href="/whatMovesMe">What moves me</a>
+  </div>
+  <div class="quadrant" style="background-image: url('images/Me2.JPG');">
+    <a href="/aboutMe">About me</a>
+  </div>
+</div>
+
+</body>
+</html>

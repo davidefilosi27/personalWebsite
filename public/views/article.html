@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article - Davide Filosi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  html, body {
+    margin: 0;
+    background-color: #2f3136;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #61dafb;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 80px auto 60px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  h2, h3 {
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+
+  /* Simple Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .pagination a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+  }
+
+  .pagination a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  /* Floating Home Button */
+  .home-button {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    z-index: 10;
+  }
+
+  .home-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+  }
+
+  .home-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .home-button:hover svg {
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    .container {
+      margin: 60px 16px 40px 16px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<a href="/" class="home-button" aria-label="Go to Home">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 3l8 8h-3v8h-10v-8h-3l8-8z"/>
+  </svg>
+</a>
+
+<div class="container">
+  <h1>Design Choices behind this website</h1>
+  <p><em>Published on October 20, 2025</em></p>
+  <p></p>
+  <h2>1: Geometry and coherence</h2>
+  <p></p>
+  <h2>2: The power of images</h2>
+
+</body>
+</html>
